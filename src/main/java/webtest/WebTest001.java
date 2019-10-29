@@ -25,20 +25,20 @@ public class WebTest001 {
 		System.out.println("Let's WebTest!!!!-----END");
 	}
 
-	@Bean
-	public RestTemplate restTemplate(RestTemplateBuilder builder) {
-		return builder.build();
-	}
-
-	@Bean
-	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
-		return args -> {
-			PersonEntity personEntity = restTemplate.getForObject(
-					"http://127.0.0.1:8080/kiki/findall", PersonEntity.class);
-			System.out.println(personEntity.toString());
-
-		};
-	}
+//	@Bean
+//	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+//		return builder.build();
+//	}
+//
+//	@Bean
+//	public CommandLineRunner run(RestTemplate restTemplate) throws Exception {
+//		return args -> {
+//			PersonEntity personEntity = restTemplate.getForObject(
+//					"http://127.0.0.1:8080/kiki/findall", PersonEntity.class);
+//			System.out.println(personEntity.toString());
+//
+//		};
+//	}
 }
 
 
